@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $.get("/name",function(data){
+            $("#name").val(data.name);
+        });
+    });
+</script>
+</head>
+<body>
+<div style="height:900px;width:600px;background-color:green;">
+    <div style="height:10%;border:1px solid black">
+        <p>it's header</p>
+    </div>
+    <div style="height:80%;border:1px solid black;">
+        <div style="height:100%;float:left;border:1px solid black;width:20%;">it's left</div>
+        <div style="height:100%;border:1px solid black;">
+            <p>it's right</p>
+            <div id="name"></div>
+        </div>
+    </div>
+    <div style="height:10%;border:1px solid black;">
+        <p>it's footer</p>
+    </div>
+</div>
+</body>
+</html>

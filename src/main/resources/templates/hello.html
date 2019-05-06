@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<p>hello,it's me</p>
+<div th:text="${stu.name}"></div>
+<div th:each="stulist : ${list}">
+    <div th:text=${stulist.id}></div>
+    <div th:text=${stulist.name}></div>
+</div>
+<div>
+    <ul th:each="stulist : ${list}">
+        <li th:text="${stulist.id}"></li>
+        <li th:text="${stulist.name}"></li>
+    </ul>
+</div>
+<div>
+    <p th:text="${locale}"></p>
+    <p th:text="${#lists.size(list)}"></p>
+    <p th:text="${#dates.createNow()}"></p>
+    <p th:text="${#dates.format(time, 'yyyy-MM-dd HH:mm:ss')}"></p>
+</div>
+</body>
+</html>
